@@ -1,0 +1,157 @@
+@font-face {
+  font-family: Apercu Light;
+  src: url(../fonts/Apercu-Light.otf);
+}
+
+@font-face {
+  font-family: Apercu Regular;
+  src: url(../fonts/Apercu-Regular.otf);
+}
+
+@font-face {
+  font-family: Apercu Medium;
+  src: url(../fonts/Apercu-Medium.otf);
+}
+
+@font-face {
+  font-family: Canela Light;
+  src: url(../fonts/Canela-Light.otf);
+}
+
+@font-face {
+  font-family: Canela Medium;
+  src: url(../fonts/Canela-Medium.otf);
+}
+
+@font-face {
+  font-family: Canela Bold;
+  src: url(../fonts/Canela-Bold.otf);
+}
+
+/* Mobile | Basic text styles */
+h1 {
+  font-family: Canela Bold, Arial, Helvetica, sans-serif;
+  font-size: 56px;
+  line-height: 67px;
+}
+
+h2 {
+  font-family: Canela Bold, Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+h3 {
+  font-family: Canela Light, Arial, Helvetica, sans-serif;
+  font-size: 31px;
+  line-height: 41px;
+}
+
+h4 {
+  font-family: Apercu Medium, Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  line-height: 25px;
+}
+
+h5 {
+  font-family: Apercu Medium, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+p {
+  font-family: Apercu Light, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.p-big {
+  font-family: Apercu Regular, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.p-big-serif {
+  font-family: Canela Light, Arial, Helvetica, sans-serif;
+  font-size: 31px;
+  line-height: 41px;
+}
+
+.p-small {
+  font-family: Apercu Regular, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.link {
+  font-family: Apercu Medium, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+/* Desktop | Basic text styles */
+
+@media (min-width: 850px) {
+  h1 {
+    font-family: Canela Bold, Arial, Helvetica, sans-serif;
+    font-size: 128px;
+    line-height: 170px;
+  }
+
+  h2 {
+    font-family: Canela Medium, Arial, Helvetica, sans-serif;
+    font-size: 74px;
+    line-height: 74px;
+  }
+
+  .h2-big {
+    font-family: Canela Bold, Arial, Helvetica, sans-serif;
+    font-size: 96px;
+  }
+
+  h3 {
+    font-family: Canela Light, Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    line-height: 41px;
+  }
+
+  h4 {
+    font-family: Apercu Medium, Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  h5 {
+    font-family: Apercu Medium, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  p {
+    font-family: Apercu Light, Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  .p-big {
+    font-family: Apercu Regular, Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .p-big-serif {
+    font-family: Canela Light, Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    line-height: 70px;
+  }
+
+  .p-small {
+    font-family: Apercu Regular, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+  }
+
+  .link {
+    font-family: Apercu Medium, Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 18px;
+  }
+}

@@ -9,7 +9,7 @@ export const PageSubtitle = ({ page }) => {
   return (
     <section className="m-page-intro">
       <h1>{page.title.rendered}</h1>
-      <p className="a-page-subtitle">{sottotitolo}</p>
+      <p className="a-page-subtitle p-big">{sottotitolo}</p>
 
       {bottone && (
         <button className="a-button">
