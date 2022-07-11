@@ -13,8 +13,8 @@
   .p-home {
     .m-page-intro {
       align-items: center;
-      padding: 1rem 60px;
-      gap: 80px;
+      padding: 3rem 60px;
+      gap: 60px;
       height: calc(100vh - 110px);
 
       h1 {

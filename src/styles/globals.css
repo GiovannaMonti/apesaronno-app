@@ -1,6 +1,12 @@
+/* general */
 @import "reset.css";
 @import "text-styles.css";
+
+/* components */
 @import "menu.css";
 @import "button.css";
-@import "home.css";
 @import "slider.css";
+@import "contact-card.css";
+
+/* pages */
+@import "home.css";

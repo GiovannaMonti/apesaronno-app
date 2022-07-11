@@ -1,0 +1,36 @@
+.m-contact-card {
+  padding: 3rem 16px;
+
+  .m-card-wrapper {
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background: #f9f1ea;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+    h3 {
+      color: #ce6c47;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 850px) {
+  .m-contact-card {
+    padding: 5rem 60px;
+    display: flex;
+    justify-content: center;
+
+    .m-card-wrapper {
+      padding: 5rem 3rem;
+      max-width: 60%;
+      gap: 45px;
+    }
+  }
+}
