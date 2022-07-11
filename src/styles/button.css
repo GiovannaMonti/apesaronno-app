@@ -1,0 +1,51 @@
+.a-button {
+  position: relative;
+  text-transform: uppercase;
+  border: 0;
+  padding: 0;
+  background: unset;
+  height: 50px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    width: inherit;
+    position: relative;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 100% 200%;
+    background-position: top;
+    transition: background-position 0.35s ease-in-out;
+  }
+
+  a:hover {
+    background-position: bottom;
+  }
+}
+
+.a-button.a-button--red {
+  a {
+    background-image: linear-gradient(to top, white 50%, #ce6c47 50%),
+      linear-gradient(to top, #ce6c47 50%, transparent 50%);
+  }
+
+  border-bottom: 2px solid #ce6c47;
+}
+
+.a-button.a-button--default {
+  width: 100%;
+}
+
+@media (min-width: 850px) {
+  .a-button {
+    height: 65px;
+  }
+
+  .a-button.a-button--default {
+    width: 20vw;
+  }
+}

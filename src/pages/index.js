@@ -22,7 +22,7 @@ export default function Home({ page }) {
   return (
     <>
       <Menu />
-      <div>
+      <div className="p-home">
         <Head>
           <title>{page.title.rendered} | A.P.E. Saronno</title>
           <meta
@@ -33,7 +33,10 @@ export default function Home({ page }) {
         </Head>
 
         <main>
-          <PageSubtitle page={page} />
+          <section className="m-page-intro">
+            <h1>{page.title.rendered}</h1>
+            <PageSubtitle page={page} />
+          </section>
         </main>
       </div>
     </>

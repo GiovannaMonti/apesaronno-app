@@ -1,0 +1,25 @@
+.p-home {
+  .m-page-intro {
+    padding: 0.5rem 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+    height: calc(100vh - 90px);
+  }
+}
+
+@media (min-width: 850px) {
+  .p-home {
+    .m-page-intro {
+      align-items: center;
+      padding: 1rem 60px;
+      gap: 80px;
+      height: calc(100vh - 110px);
+
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+}
