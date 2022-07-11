@@ -2,12 +2,12 @@ import Head from "next/head"
 
 import { Menu } from "../components/molecules/Menu"
 import { PageSubtitle } from "../components/molecules/PageSubtitle"
-import { WP_REST } from "../utils/url"
+import { TextSlider } from "../components/organisms/TextSlider"
+
+import { fetchSinglePage } from "../utils/fetch"
 
 export async function getStaticProps() {
-  const src = await fetch(WP_REST + "/pages/147")
-  const resp = await src.json()
-  const page = resp
+  const page = await fetchSinglePage(147)
 
   return {
     props: {
@@ -37,6 +37,8 @@ export default function Home({ page }) {
             <h1>{page.title.rendered}</h1>
             <PageSubtitle page={page} />
           </section>
+
+          <TextSlider page={page} />
         </main>
       </div>
     </>

@@ -57,6 +57,7 @@ h4 {
 h5 {
   font-family: Apercu Medium, Arial, Helvetica, sans-serif;
   font-size: 16px;
+  text-transform: uppercase;
 }
 
 p {

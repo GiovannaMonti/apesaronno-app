@@ -1,7 +1,7 @@
-export const Button = ({ url, color, size }) => {
+export const Button = ({ label, url, color, size }) => {
   return (
     <button className={`a-button a-button--${color} a-button--${size} link`}>
-      <a href={url}>Scopri i servizi</a>
+      <a href={url}>{label}</a>
     </button>
   )
 }

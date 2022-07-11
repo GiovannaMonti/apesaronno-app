@@ -5,6 +5,7 @@
   padding: 0;
   background: unset;
   height: 50px;
+  width: 100%;
 
   a {
     display: flex;
@@ -36,8 +37,17 @@
   border-bottom: 2px solid #ce6c47;
 }
 
-.a-button.a-button--default {
-  width: 100%;
+.a-button.a-button--white {
+  a {
+    background-image: linear-gradient(to top, #59534f 50%, #fefaf8 50%),
+      linear-gradient(to top, #fefaf8 50%, transparent 50%);
+  }
+
+  border-bottom: 2px solid #fefaf8;
+}
+
+.a-button.a-button--small {
+  width: 40vw;
 }
 
 @media (min-width: 850px) {
@@ -45,7 +55,8 @@
     height: 65px;
   }
 
-  .a-button.a-button--default {
+  .a-button,
+  .a-button.a-button--small {
     width: 20vw;
   }
 }

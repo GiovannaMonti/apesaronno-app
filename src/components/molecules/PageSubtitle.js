@@ -12,7 +12,14 @@ export const PageSubtitle = ({ page }) => {
     <>
       <p className="a-page-subtitle p-big">{sottotitolo}</p>
 
-      {bottone && <Button url={bottone} color="red" size="default" />}
+      {bottone && (
+        <Button
+          label="Scopri i servizi"
+          url={bottone}
+          color="red"
+          size="default"
+        />
+      )}
     </>
   )
 }
