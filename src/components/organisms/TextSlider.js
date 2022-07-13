@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import "keen-slider/keen-slider.min.css"
 import { useKeenSlider } from "keen-slider/react" // import from 'keen-slider/react.es' for to get an ES module
 

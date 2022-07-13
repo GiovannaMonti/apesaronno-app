@@ -14,6 +14,11 @@
 }
 
 @font-face {
+  font-family: Canela Thin;
+  src: url(../fonts/Canela-Thin.otf);
+}
+
+@font-face {
   font-family: Canela Light;
   src: url(../fonts/Canela-Light.otf);
 }

@@ -4,6 +4,7 @@ import { Menu } from "../components/molecules/Menu"
 import { PageSubtitle } from "../components/molecules/PageSubtitle"
 import { TextSlider } from "../components/organisms/TextSlider"
 import { ContactCard } from "../components/molecules/ContactCard"
+import { NewsletterCard } from "../components/organisms/NewsletterCard"
 
 import { fetchSinglePage } from "../utils/fetch"
 
@@ -42,6 +43,8 @@ export default function Home({ page }) {
           <TextSlider page={page} />
 
           <ContactCard page={page} />
+
+          <NewsletterCard page={page} />
         </main>
       </div>
     </>
