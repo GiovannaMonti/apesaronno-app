@@ -32,11 +32,13 @@ export const Footer = ({ page }) => {
       <div className="o-footer-info">
         <div className="m-owner-info">
           <Logo fill="#FEFAF8" />
-          <p className="a-name p-small">{nomeSocieta}</p>
-          <p className="a-address p-small">{indirizzo}</p>
-          <p className="a-city-cap p-small">
-            {cap}, {citta}
-          </p>
+          <div>
+            <p className="a-name p-small">{nomeSocieta}</p>
+            <p className="a-address p-small">{indirizzo}</p>
+            <p className="a-city-cap p-small">
+              {cap}, {citta}
+            </p>
+          </div>
         </div>
 
         <div className="m-contact-info">
