@@ -8,6 +8,7 @@ import { NewsletterCard } from "../components/organisms/NewsletterCard"
 import { Footer } from "../components/organisms/Footer"
 
 import { fetchSinglePage } from "../utils/fetch"
+import { EventSection } from "../components/organisms/EventSection"
 
 export async function getStaticProps() {
   const page = await fetchSinglePage(147)
@@ -44,6 +45,8 @@ export default function Home({ page }) {
           <TextSlider page={page} />
 
           <ContactCard page={page} />
+
+          <EventSection />
 
           <NewsletterCard page={page} />
 

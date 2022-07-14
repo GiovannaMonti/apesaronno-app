@@ -11,3 +11,9 @@ export async function fetchSinglePage(id) {
   const resp = await src.json()
   return resp
 }
+
+export async function fetchEvents() {
+  const src = await fetch(`${WP_REST}/eventi/`)
+  const resp = await src.json()
+  return resp
+}
