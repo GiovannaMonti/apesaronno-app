@@ -4,11 +4,12 @@ import { Menu } from "../components/molecules/Menu"
 import { PageSubtitle } from "../components/molecules/PageSubtitle"
 import { TextSlider } from "../components/organisms/TextSlider"
 import { ContactCard } from "../components/molecules/ContactCard"
+import { EventSection } from "../components/organisms/EventSection"
+import { ArticleSection } from "../components/organisms/ArticleSection"
 import { NewsletterCard } from "../components/organisms/NewsletterCard"
 import { Footer } from "../components/organisms/Footer"
 
 import { fetchSinglePage } from "../utils/fetch"
-import { EventSection } from "../components/organisms/EventSection"
 
 export async function getStaticProps() {
   const page = await fetchSinglePage(147)
@@ -47,6 +48,8 @@ export default function Home({ page }) {
           <ContactCard page={page} />
 
           <EventSection />
+
+          <ArticleSection />
 
           <NewsletterCard page={page} />
 

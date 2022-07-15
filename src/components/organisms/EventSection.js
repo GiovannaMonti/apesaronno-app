@@ -11,9 +11,11 @@ export const EventSection = () => {
     ;(async function () {
       const eventList = await fetchEvents()
 
-      const upcomingEventList = eventList.filter((event) => {
-        return Date.parse(event.acf.data_evento) >= Date.parse(new Date())
-      })
+      const upcomingEventList = eventList
+        .filter((event) => {
+          return Date.parse(event.acf.data_evento) >= Date.parse(new Date())
+        })
+        .reverse()
 
       setUpcomingEvents(upcomingEventList)
     })()
@@ -40,11 +42,9 @@ export const EventSection = () => {
       <div className="m-upcoming-events">
         <h3>Prossimi Eventi</h3>
         {!isUpcomingEventsEmpty &&
-          upcomingEvents
-            ?.reverse()
-            .map((event) => (
-              <EventCard key={event.title.rendered} event={event} />
-            ))}
+          upcomingEvents?.map((event) => (
+            <EventCard key={event.title.rendered} event={event} />
+          ))}
         {isUpcomingEventsEmpty && (
           <div className="a-no-events">
             <p className="link">Al momento non ci sono eventi in programma.</p>

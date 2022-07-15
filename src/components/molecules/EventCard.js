@@ -9,7 +9,6 @@ export const EventCard = ({ event }) => {
   } = event.acf
 
   const eventDateTime = new Date(Date.parse(date))
-  console.log("eventDateTime: ", eventDateTime)
 
   const day = eventDateTime.getDate()
   const month = eventDateTime.toLocaleString("it-IT", { month: "long" })

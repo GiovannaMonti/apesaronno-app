@@ -1,5 +1,5 @@
 .o-event-section {
-  padding: 2rem 16px;
+  padding: 3rem 16px;
   display: flex;
   flex-direction: column;
   gap: 65px;
@@ -67,7 +67,7 @@
 @media (min-width: 850px) {
   .o-event-section {
     flex-direction: row;
-    padding: 3rem 60px;
+    padding: 4rem 60px;
 
     .m-event-section-info {
       gap: 45px;

@@ -17,3 +17,9 @@ export async function fetchEvents() {
   const resp = await src.json()
   return resp
 }
+
+export async function fetchArticles() {
+  const src = await fetch(`${WP_REST}/posts/`)
+  const resp = await src.json()
+  return resp
+}
