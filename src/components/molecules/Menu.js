@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react"
+import Link from "next/link"
 import { fetchMenuItems } from "../../utils/fetch"
+
 import { Logo } from "../atoms/Logo"
 
 export const Menu = () => {
@@ -19,10 +21,12 @@ export const Menu = () => {
       <div className="m-links-container">
         {menuItems?.map((item) => {
           const { title, url } = item
+          const localUrl = url?.replace("https://data.apesaronno.it", "")
+
           return (
-            <a key={title} className="link" href={url}>
-              {title}
-            </a>
+            <Link key={title} href={localUrl}>
+              <span className="link">{title}</span>
+            </Link>
           )
         })}
       </div>

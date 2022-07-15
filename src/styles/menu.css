@@ -9,7 +9,11 @@
   .m-links-container {
     display: flex;
     align-items: center;
-    gap: 5vw;
+    gap: 4vw;
+
+    .link {
+      cursor: pointer;
+    }
   }
 }
 
