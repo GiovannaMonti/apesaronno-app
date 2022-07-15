@@ -2,12 +2,17 @@ import Head from "next/head"
 
 import { Menu } from "../components/molecules/Menu"
 import { PageSubtitle } from "../components/molecules/PageSubtitle"
-import { WP_REST } from "../utils/url"
+import { TextSlider } from "../components/organisms/TextSlider"
+import { ContactCard } from "../components/molecules/ContactCard"
+import { EventSection } from "../components/organisms/EventSection"
+import { ArticleSection } from "../components/organisms/ArticleSection"
+import { NewsletterCard } from "../components/organisms/NewsletterCard"
+import { Footer } from "../components/organisms/Footer"
+
+import { fetchSinglePage } from "../utils/fetch"
 
 export async function getStaticProps() {
-  const src = await fetch(WP_REST + "/pages/147")
-  const resp = await src.json()
-  const page = resp
+  const page = await fetchSinglePage(147)
 
   return {
     props: {
@@ -22,7 +27,7 @@ export default function Home({ page }) {
   return (
     <>
       <Menu />
-      <div>
+      <div className="p-home">
         <Head>
           <title>{page.title.rendered} | A.P.E. Saronno</title>
           <meta
@@ -33,7 +38,22 @@ export default function Home({ page }) {
         </Head>
 
         <main>
-          <PageSubtitle page={page} />
+          <section className="m-page-intro">
+            <h1>{page.title.rendered}</h1>
+            <PageSubtitle page={page} />
+          </section>
+
+          <TextSlider page={page} />
+
+          <ContactCard page={page} />
+
+          <EventSection />
+
+          <ArticleSection />
+
+          <NewsletterCard page={page} />
+
+          <Footer page={page} />
         </main>
       </div>
     </>

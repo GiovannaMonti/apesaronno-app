@@ -1,3 +1,5 @@
+import { Button } from "../atoms/Button"
+
 export const PageSubtitle = ({ page }) => {
   const pageSubtitle = page.blocks.find(
     (block) =>
@@ -7,15 +9,17 @@ export const PageSubtitle = ({ page }) => {
   const { sottotitolo, bottone } = pageSubtitle.attrs
 
   return (
-    <section className="m-page-intro">
-      <h1>{page.title.rendered}</h1>
+    <>
       <p className="a-page-subtitle p-big">{sottotitolo}</p>
 
       {bottone && (
-        <button className="a-button">
-          <a href={bottone}>Scopri i servizi</a>
-        </button>
+        <Button
+          label="Scopri i servizi"
+          url={bottone}
+          color="red"
+          size="default"
+        />
       )}
-    </section>
+    </>
   )
 }

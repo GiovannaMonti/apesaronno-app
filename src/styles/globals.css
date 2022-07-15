@@ -1,2 +1,16 @@
+/* general */
 @import "reset.css";
 @import "text-styles.css";
+
+/* components */
+@import "menu.css";
+@import "button.css";
+@import "slider.css";
+@import "contact-card.css";
+@import "event-section.css";
+@import "article-section.css";
+@import "newsletter.css";
+@import "footer.css";
+
+/* pages */
+@import "home.css";

@@ -14,6 +14,11 @@
 }
 
 @font-face {
+  font-family: Canela Thin;
+  src: url(../fonts/Canela-Thin.otf);
+}
+
+@font-face {
   font-family: Canela Light;
   src: url(../fonts/Canela-Light.otf);
 }
@@ -33,6 +38,7 @@ h1 {
   font-family: Canela Bold, Arial, Helvetica, sans-serif;
   font-size: 56px;
   line-height: 67px;
+  color: #ce6c47;
 }
 
 h2 {
@@ -56,6 +62,7 @@ h4 {
 h5 {
   font-family: Apercu Medium, Arial, Helvetica, sans-serif;
   font-size: 16px;
+  text-transform: uppercase;
 }
 
 p {
@@ -93,7 +100,7 @@ p {
 @media (min-width: 850px) {
   h1 {
     font-family: Canela Bold, Arial, Helvetica, sans-serif;
-    font-size: 128px;
+    font-size: 118px;
     line-height: 170px;
   }
 
@@ -134,7 +141,7 @@ p {
 
   .p-big {
     font-family: Apercu Regular, Arial, Helvetica, sans-serif;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 42px;
   }
 
@@ -151,7 +158,7 @@ p {
 
   .link {
     font-family: Apercu Medium, Arial, Helvetica, sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 18px;
   }
 }
