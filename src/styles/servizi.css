@@ -1,0 +1,18 @@
+.p-servizi {
+  .o-elenco-servizi {
+    display: flex;
+    flex-direction: column;
+    background: #454b66;
+    gap: 60px;
+    padding: 3rem 16px;
+  }
+}
+
+@media (min-width: 850px) {
+  .p-servizi {
+    .o-elenco-servizi {
+      gap: 100px;
+      padding: 5rem 60px;
+    }
+  }
+}

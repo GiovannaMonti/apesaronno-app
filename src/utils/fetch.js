@@ -6,6 +6,12 @@ export async function fetchMenuItems() {
   return resp
 }
 
+export async function fetchPages() {
+  const src = await fetch(`${WP_REST}/pages/`)
+  const resp = await src.json()
+  return [...resp]
+}
+
 export async function fetchSinglePage(id) {
   const src = await fetch(`${WP_REST}/pages/${id}`)
   const resp = await src.json()
