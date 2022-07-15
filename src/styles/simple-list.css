@@ -1,0 +1,48 @@
+.m-simple-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  h3 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid;
+  }
+
+  ul {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .a-button {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 850px) {
+  .m-simple-list {
+    gap: 30px;
+
+    h3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      border-bottom: 2px solid;
+
+      .link {
+        cursor: pointer;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+
+    .a-button {
+      display: none;
+    }
+  }
+}
