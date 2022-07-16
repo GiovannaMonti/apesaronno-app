@@ -52,9 +52,9 @@ export default function Home({ page }) {
           <ArticleSection />
 
           <NewsletterCard page={page} />
-
-          <Footer page={page} />
         </main>
+
+        <Footer page={page} />
       </div>
     </>
   )
