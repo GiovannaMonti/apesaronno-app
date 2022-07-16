@@ -1,0 +1,46 @@
+.p-contatti {
+  .m-phone-email {
+    padding: 2rem 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .m-phone,
+    .m-email {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      h4 {
+        color: #ce6c47;
+      }
+
+      a {
+        border-bottom: solid 1px #59534f;
+      }
+    }
+  }
+}
+
+@media (min-width: 850px) {
+  .p-contatti {
+    .m-contacts-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 3rem 0;
+
+      .m-phone-email {
+        flex: 1;
+        gap: 7vw;
+        max-width: 70%;
+        flex-direction: row;
+
+        .m-phone {
+          p {
+            padding-bottom: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+}
