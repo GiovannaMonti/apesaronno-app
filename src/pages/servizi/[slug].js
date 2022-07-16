@@ -4,6 +4,7 @@ import Head from "next/dist/shared/lib/head"
 import { Menu } from "../../components/molecules/Menu"
 import { PageSubtitle } from "../../components/molecules/PageSubtitle"
 import { AccordionCard } from "../../components/molecules/AccordionCard"
+import { Calendar } from "../../components/molecules/Calendar"
 import { Footer } from "../../components/organisms/Footer"
 
 export async function getStaticPaths() {
@@ -48,6 +49,10 @@ export default function Servizio({ page }) {
           </section>
 
           <AccordionCard page={page} />
+
+          <section className="m-calendar-section">
+            <Calendar page={page} />
+          </section>
         </main>
 
         <Footer page={page} />
