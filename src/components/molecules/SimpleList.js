@@ -10,31 +10,33 @@ export const SimpleList = ({ list, color }) => {
     <div className="m-simple-list" style={{ color: color }}>
       <h3 className="a-title" style={{ borderBottomColor: `${color}` }}>
         {titolo}
-        <div className="display-desktop">
-          <Link href={localUrl}>
-            <span className="link">
-              Vai al servizio <ArrowRight />
-            </span>
-          </Link>
-        </div>
+        {bottone && (
+          <div className="display-desktop">
+            <Link href={localUrl}>
+              <span className="link">
+                Vai al servizio <ArrowRight />
+              </span>
+            </Link>
+          </div>
+        )}
       </h3>
 
       <ul>
-        {elenco.map((item) => (
+        {elenco?.map((item) => (
           <li key={item.elemento}>{item.elemento}</li>
         ))}
       </ul>
 
-      <div className="a-button display-mobile">
-        {bottone && (
+      {bottone && (
+        <div className="a-button display-mobile">
           <Button
             label="Vai al servizio"
             url={bottone}
             color="white"
             size="small"
           />
-        )}
-      </div>
+        </div>
+      )}
     </div>
   )
 }

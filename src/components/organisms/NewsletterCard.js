@@ -1,4 +1,3 @@
-import { Button } from "../atoms/Button"
 import { NewsletterForm } from "../molecules/NewsletterForm"
 
 export const NewsletterCard = ({ page }) => {
@@ -6,17 +5,21 @@ export const NewsletterCard = ({ page }) => {
     (block) => block.blockName === "genesis-custom-blocks/newsletter"
   )
 
-  const { etichetta, titolo, descrizione } = newsletterBlock.attrs
+  const { etichetta, titolo, descrizione } = newsletterBlock?.attrs || null
 
   return (
-    <div className="o-newsletter">
-      <div className="m-newsletter-text-wrapper">
-        <h3 className="a-newsletter-label">{etichetta}</h3>
-        <h2 className="a-newsletter-title">{titolo}</h2>
-        <p className="a-newsletter-desc">{descrizione}</p>
-      </div>
+    <>
+      {newsletterBlock && (
+        <div className="o-newsletter">
+          <div className="m-newsletter-text-wrapper">
+            <h3 className="a-newsletter-label">{etichetta}</h3>
+            <h2 className="a-newsletter-title">{titolo}</h2>
+            <p className="a-newsletter-desc">{descrizione}</p>
+          </div>
 
-      <NewsletterForm />
-    </div>
+          <NewsletterForm />
+        </div>
+      )}
+    </>
   )
 }
