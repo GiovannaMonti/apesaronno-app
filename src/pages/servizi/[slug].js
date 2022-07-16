@@ -48,11 +48,13 @@ export default function Servizio({ page }) {
             <PageSubtitle page={page} />
           </section>
 
-          <AccordionCard page={page} />
+          {page.acf.accordion && <AccordionCard page={page} />}
 
-          <section className="m-calendar-section">
-            <Calendar page={page} />
-          </section>
+          {page.acf.programma && (
+            <section className="m-calendar-section">
+              <Calendar page={page} />
+            </section>
+          )}
         </main>
 
         <Footer page={page} />
