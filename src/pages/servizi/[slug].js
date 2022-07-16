@@ -3,6 +3,7 @@ import Head from "next/dist/shared/lib/head"
 
 import { Menu } from "../../components/molecules/Menu"
 import { PageSubtitle } from "../../components/molecules/PageSubtitle"
+import { AccordionCard } from "../../components/molecules/AccordionCard"
 import { Footer } from "../../components/organisms/Footer"
 
 export async function getStaticPaths() {
@@ -26,6 +27,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Servizio({ page }) {
+  console.log("page: ", page)
   return (
     <>
       <Menu />
@@ -44,6 +46,8 @@ export default function Servizio({ page }) {
             <h1>{page.title.rendered}</h1>
             <PageSubtitle page={page} />
           </section>
+
+          <AccordionCard page={page} />
         </main>
 
         <Footer page={page} />

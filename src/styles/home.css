@@ -16,6 +16,7 @@
 @media (min-width: 850px) {
   .m-page-intro {
     align-items: center;
+    text-align: center;
     padding: 3rem 60px;
     gap: 60px;
   }
