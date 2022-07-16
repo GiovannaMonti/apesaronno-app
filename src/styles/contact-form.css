@@ -1,0 +1,56 @@
+.o-contact-form {
+  background: #f9f1ea;
+  padding: 3rem 16px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 1.5rem;
+
+    label {
+      color: #ce6c47;
+      display: block;
+      font-family: Canela Light, Arial, Helvetica, sans-serif;
+      font-size: 31px;
+      line-height: 41px;
+    }
+
+    input,
+    textarea {
+      padding: 1rem;
+      background: #fefaf8;
+      border: 1px solid #00000033;
+      font-family: Apercu Light, Arial, Helvetica, sans-serif;
+      font-size: 18px;
+    }
+
+    button {
+      align-self: center;
+    }
+  }
+}
+
+@media (min-width: 850px) {
+  .o-contact-form {
+    padding: 5rem 60px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+    form {
+      gap: 25px;
+
+      input,
+      textarea {
+        flex: 1;
+      }
+
+      label {
+        font-family: Canela Light, Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        line-height: 41px;
+      }
+    }
+  }
+}
