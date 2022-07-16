@@ -16,7 +16,7 @@ export const ArticleCard = ({ article }) => {
         <div className="a-date link">
           {day} {month} {year}
         </div>
-        <Link href={`/articoli/${slug}`}>
+        <Link href={`/news/${slug}`}>
           <h3>{title.rendered}</h3>
         </Link>
       </div>
