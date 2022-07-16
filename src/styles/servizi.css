@@ -10,6 +10,10 @@
 
 @media (min-width: 850px) {
   .p-servizi {
+    .m-page-intro {
+      text-align: center;
+    }
+
     .o-elenco-servizi {
       gap: 100px;
       padding: 5rem 60px;
