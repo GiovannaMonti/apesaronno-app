@@ -47,6 +47,15 @@
       font-size: 40px;
       line-height: 41px;
     }
+
+    .accordion__button {
+      padding: 1rem 0;
+    }
+
+    .accordion__panel {
+      padding: 3rem 1rem;
+      max-width: 50%;
+    }
   }
 }
 
