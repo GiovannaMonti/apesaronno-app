@@ -41,6 +41,7 @@
       padding: 5rem 4rem;
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       gap: 2rem;
 
       .m-calendar-item {
