@@ -16,7 +16,7 @@ export const Footer = ({ page }) => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <div className="o-footer">
+    <footer className="o-footer">
       <div className="a-map">
         <iframe
           src={mappa}
@@ -66,6 +66,6 @@ export const Footer = ({ page }) => {
           {indirizzo} - {cap} {citta}
         </p>
       </div>
-    </div>
+    </footer>
   )
 }
