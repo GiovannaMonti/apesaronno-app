@@ -45,3 +45,21 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.display-desktop {
+  display: none;
+}
+
+.display-mobile {
+  display: block;
+}
+
+@media (min-width: 850px) {
+  .display-desktop {
+    display: block;
+  }
+
+  .display-mobile {
+    display: none;
+  }
+}

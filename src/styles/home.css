@@ -1,20 +1,28 @@
+.m-page-intro {
+  padding: 0.5rem 16px;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 35px;
+}
+
 .p-home {
   .m-page-intro {
-    padding: 0.5rem 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 35px;
     height: calc(100vh - 90px);
   }
 }
 
 @media (min-width: 850px) {
+  .m-page-intro {
+    align-items: center;
+    text-align: center;
+    padding: 3rem 60px;
+    gap: 60px;
+  }
+
   .p-home {
     .m-page-intro {
-      align-items: center;
-      padding: 3rem 60px;
-      gap: 60px;
       height: calc(100vh - 110px);
 
       h1 {

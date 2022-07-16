@@ -9,8 +9,13 @@
 @import "contact-card.css";
 @import "event-section.css";
 @import "article-section.css";
+@import "simple-list.css";
+@import "accordion.css";
+@import "simple-list.css";
+@import "calendar.css";
 @import "newsletter.css";
 @import "footer.css";
 
 /* pages */
 @import "home.css";
+@import "servizi.css";

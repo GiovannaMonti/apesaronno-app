@@ -1,0 +1,60 @@
+.m-calendar-section {
+  padding: 3rem 16px;
+}
+
+.m-calendar {
+  border: 1px solid #ce6c47;
+  .a-calendar-header {
+    padding: 0.5rem;
+    color: #fefaf8;
+    background: #ce6c47;
+  }
+
+  .m-calendar-item {
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    ul {
+      padding: 0 0.25rem;
+    }
+  }
+}
+
+@media (min-width: 850px) {
+  .m-calendar-section {
+    padding: 5rem 60px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .m-calendar {
+    min-width: 75%;
+    max-width: 75%;
+
+    .a-calendar-header {
+      padding: 1rem;
+    }
+
+    .m-calendar-items {
+      padding: 5rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      .m-calendar-item {
+        padding: 0;
+        gap: 1rem;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
