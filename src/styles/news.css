@@ -1,0 +1,30 @@
+.p-news {
+  h1 {
+    padding: 1rem 16px;
+  }
+
+  .m-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+
+@media (min-width: 850px) {
+  .p-news {
+    h1 {
+      padding: 5rem 60px;
+      text-align: center;
+    }
+
+    .m-articles {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .m-article-card {
+        width: 45%;
+      }
+    }
+  }
+}

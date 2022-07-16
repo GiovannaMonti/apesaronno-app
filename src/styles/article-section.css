@@ -9,7 +9,8 @@
     color: #454b66;
   }
 
-  .m-latest-articles {
+  .m-latest-articles,
+  .m-articles {
     display: flex;
     flex-direction: column;
     gap: 35px;
@@ -60,7 +61,8 @@
       color: #ce6c47;
     }
 
-    .m-latest-articles {
+    .m-latest-articles,
+    .m-articles {
       gap: 1rem;
       .first-row,
       .second-row {
