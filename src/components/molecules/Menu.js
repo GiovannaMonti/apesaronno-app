@@ -36,7 +36,7 @@ export const Menu = () => {
       {containerWidth >= 835 && (
         <nav className="m-navigation">
           <Link href="/">
-            <img src="assets/logo.svg" alt="logo"></img>
+            <img src="/assets/logo.svg" alt="logo"></img>
           </Link>
           <MenuLinks menuItems={menuItems} />
         </nav>
