@@ -14,7 +14,8 @@
     }
   }
 
-  .m-upcoming-events {
+  .m-upcoming-events,
+  .m-events {
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -53,6 +54,10 @@
       border: 1px solid #454b66;
 
       .m-place-and-time {
+        svg {
+          min-width: 24px;
+        }
+
         p {
           font-family: Apercu Medium, Arial, Helvetica, sans-serif;
           display: flex;
@@ -73,8 +78,9 @@
       gap: 45px;
     }
 
-    .m-upcoming-events {
-      min-width: 60%;
+    .m-upcoming-events,
+    .m-events {
+      min-width: 55%;
 
       .m-event-card {
         display: flex;

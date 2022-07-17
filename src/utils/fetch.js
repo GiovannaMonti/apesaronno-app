@@ -19,13 +19,13 @@ export async function fetchSinglePage(id) {
 }
 
 export async function fetchEvents() {
-  const src = await fetch(`${WP_REST}/eventi/`)
+  const src = await fetch(`${WP_REST}/eventi/?per_page=15`)
   const resp = await src.json()
   return resp
 }
 
 export async function fetchArticles() {
-  const src = await fetch(`${WP_REST}/posts/`)
+  const src = await fetch(`${WP_REST}/posts/?per_page=15`)
   const resp = await src.json()
   return resp
 }

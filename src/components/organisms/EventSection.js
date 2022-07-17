@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { sortBy } from "lodash"
 
 import { Button } from "../atoms/Button"
 import { fetchEvents } from "../../utils/fetch"
@@ -15,9 +16,10 @@ export const EventSection = () => {
         .filter((event) => {
           return Date.parse(event.acf.data_evento) >= Date.parse(new Date())
         })
-        .reverse()
+        .map((item) => ({ ...item, date: item.acf.data_evento }))
 
-      setUpcomingEvents(upcomingEventList)
+      const sortedEventList = sortBy(upcomingEventList, ["date"]).slice(0, 2)
+      setUpcomingEvents(sortedEventList)
     })()
   }, [])
 

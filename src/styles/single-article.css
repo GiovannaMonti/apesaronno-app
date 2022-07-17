@@ -1,0 +1,48 @@
+.p-article {
+  h1 {
+    padding: 1rem 16px;
+  }
+
+  .m-article-content-wrapper {
+    background: #f9f1ea;
+    padding: 2rem 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    span,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: #454b66;
+    }
+
+    h2 {
+      padding: 1rem 0;
+    }
+
+    .m-article-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+
+@media (min-width: 850px) {
+  .p-article {
+    h1 {
+      padding: 5rem 60px;
+      text-align: center;
+    }
+
+    .m-article-content-wrapper {
+      padding: 4rem 60px;
+
+      .m-article-content {
+        gap: 40px;
+      }
+    }
+  }
+}
