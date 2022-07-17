@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { fetchMenuItems } from "../../utils/fetch"
+import { useRouter } from "next/router"
 
 import { Logo } from "../atoms/Logo"
+import { fetchMenuItems } from "../../utils/fetch"
 
 export const Menu = () => {
   const [menuItems, setMenuItems] = useState(null)
+  const router = useRouter()
 
   useEffect(() => {
     ;(async function () {
@@ -25,7 +27,13 @@ export const Menu = () => {
 
           return (
             <Link key={title} href={localUrl}>
-              <span className="link">{title}</span>
+              <span
+                className={
+                  `${router.asPath}/` === localUrl ? "active link" : "link"
+                }
+              >
+                {title}
+              </span>
             </Link>
           )
         })}
