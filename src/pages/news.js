@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 
 import { Menu } from "../components/molecules/Menu"
 import { ArticleCard } from "../components/molecules/ArticleCard"
+import { NewsletterCard } from "../components/organisms/NewsletterCard"
 import { Footer } from "../components/organisms/Footer"
 
 import { fetchSinglePage, fetchArticles } from "../utils/fetch"
@@ -55,7 +56,14 @@ export default function News({ page }) {
                 ))}
               </div>
             )}
+            {isArticlesListEmpty && (
+              <div className="a-no-articles">
+                <p className="link">Al momento non ci sono articoli.</p>
+              </div>
+            )}
           </section>
+
+          <NewsletterCard page={page} />
         </main>
 
         <Footer page={page} />
