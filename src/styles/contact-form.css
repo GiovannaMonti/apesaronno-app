@@ -29,6 +29,19 @@
       align-self: center;
     }
   }
+
+  .m-form-success,
+  .m-form-error {
+    padding: 1rem;
+    background: #fefaf8;
+    border: 1px solid #00000033;
+    color: #59534f;
+    border-radius: 10px;
+  }
+
+  .m-form-error {
+    background: #ffc5aa;
+  }
 }
 
 @media (min-width: 850px) {

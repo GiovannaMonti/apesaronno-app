@@ -1,42 +1,88 @@
 import { useState } from "react"
 import { Button } from "../atoms/Button"
+import axios from "axios"
 
 export const ContactForm = () => {
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
+  const [status, setStatus] = useState({
+    submitted: false,
+    submitting: false,
+    info: { error: false, msg: null },
+  })
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const data = {
-      name,
-      email,
-      message,
+  const [inputs, setInputs] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
+
+  const handleServerResponse = (ok, msg) => {
+    if (ok) {
+      setStatus({
+        submitted: true,
+        submitting: false,
+        info: { error: false, msg: msg },
+      })
+      setInputs({
+        name: "",
+        email: "",
+        message: "",
+      })
+    } else {
+      setStatus({
+        info: { error: true, msg: msg },
+      })
     }
+  }
 
-    fetch("/api/contact", {
-      method: "post",
-      body: JSON.stringify(data),
+  const handleOnChange = (e) => {
+    e.persist()
+    setInputs((prev) => ({
+      ...prev,
+      [e.target.id]: e.target.value,
+    }))
+    setStatus({
+      submitted: false,
+      submitting: false,
+      info: { error: false, msg: null },
     })
+  }
 
-    // console.log(data)
+  const handleOnSubmit = (e) => {
+    e.preventDefault()
+    setStatus((prevStatus) => ({ ...prevStatus, submitting: true }))
+    axios({
+      method: "POST",
+      url: "https://formspree.io/f/xayvryzz",
+      data: inputs,
+    })
+      .then((response) => {
+        handleServerResponse(true, "Grazie, il tuo messaggio è stato inviato.")
+      })
+      .catch((error) => {
+        handleServerResponse(false, error.response.data.error)
+      })
   }
 
   return (
     <section className="o-contact-form">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleOnSubmit}>
         <label htmlFor="name">Nome</label>
         <input
           id="name"
           type="text"
-          onChange={(e) => setName(e.target.value)}
+          onChange={handleOnChange}
+          value={inputs.email}
+          required
         />
 
         <label htmlFor="email">E-mail</label>
         <input
           id="email"
           type="email"
-          onChange={(e) => setEmail(e.target.value)}
+          name="_replyto"
+          onChange={handleOnChange}
+          value={inputs.email}
+          required
         />
 
         <label htmlFor="message">Messaggio</label>
@@ -44,10 +90,26 @@ export const ContactForm = () => {
           id="message"
           type="text"
           rows="4"
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={handleOnChange}
+          required
+          value={inputs.message}
         />
 
-        <Button label="Invia" color="red" size="small" isSubmit={true} />
+        <Button
+          label={!status.submitting ? "Invia" : "Invio..."}
+          color="red"
+          size="small"
+          isSubmit={true}
+        />
+
+        {status.info.error && (
+          <div className="m-form-error link">
+            Siamo spiacenti, si è verificato un errore.
+          </div>
+        )}
+        {!status.info.error && status.info.msg && (
+          <p className="m-form-success link">{status.info.msg}</p>
+        )}
       </form>
     </section>
   )
