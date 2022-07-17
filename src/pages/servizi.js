@@ -3,6 +3,7 @@ import Head from "next/head"
 import { Menu } from "../components/molecules/Menu"
 import { PageSubtitle } from "../components/molecules/PageSubtitle"
 import { SimpleList } from "../components/molecules/SimpleList"
+import { NewsletterCard } from "../components/organisms/NewsletterCard"
 import { Footer } from "../components/organisms/Footer"
 
 import { fetchSinglePage } from "../utils/fetch"
@@ -53,8 +54,9 @@ export default function Servizi({ page }) {
               ))}
           </section>
 
-          <Footer page={page} />
+          <NewsletterCard page={page} />
         </main>
+        <Footer page={page} />
       </div>
     </>
   )
