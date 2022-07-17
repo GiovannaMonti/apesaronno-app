@@ -7,16 +7,13 @@
   max-height: 90px;
 
   .m-menu-bar {
-    width: 90vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: none;
 
     .a-menu-icon {
-      position: fixed;
-      top: 20px;
-      right: 20px;
       cursor: pointer;
     }
 
