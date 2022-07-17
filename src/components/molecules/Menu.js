@@ -46,7 +46,7 @@ export const Menu = () => {
         <nav className="m-navigation">
           <div className="m-menu-bar">
             <Link href="/">
-              <img src="assets/logo.svg" alt="logo"></img>
+              <img src="/assets/logo.svg" alt="logo"></img>
             </Link>
             <span className="a-menu-icon" onClick={() => toggleMenu()}>
               <Hamburger />
