@@ -9,11 +9,9 @@ import { Footer } from "../components/organisms/Footer"
 import { ContactForm } from "../components/molecules/ContactForm"
 
 export async function getStaticProps() {
-  const page = await fetchSinglePage(115)
-
   return {
     props: {
-      page,
+      page: await fetchSinglePage(115),
     },
     revalidate: 10,
   }

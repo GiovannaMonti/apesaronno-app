@@ -9,11 +9,9 @@ import { Footer } from "../components/organisms/Footer"
 import { fetchSinglePage } from "../utils/fetch"
 
 export async function getStaticProps() {
-  const page = await fetchSinglePage(105)
-
   return {
     props: {
-      page,
+      page: await fetchSinglePage(105),
     },
     revalidate: 10,
   }

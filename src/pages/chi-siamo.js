@@ -8,11 +8,9 @@ import { NewsletterCard } from "../components/organisms/NewsletterCard"
 import { Footer } from "../components/organisms/Footer"
 
 export async function getStaticProps() {
-  const page = await fetchSinglePage(113)
-
   return {
     props: {
-      page,
+      page: await fetchSinglePage(113),
     },
     revalidate: 10,
   }
