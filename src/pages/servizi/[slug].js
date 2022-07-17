@@ -28,7 +28,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Servizio({ page }) {
-  console.log("page: ", page)
+  // console.log("page: ", page)
   return (
     <>
       <Menu />

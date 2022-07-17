@@ -28,7 +28,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Article({ post }) {
-  console.log("post: ", post)
+  // console.log("post: ", post)
 
   const blocks = post.blocks
 

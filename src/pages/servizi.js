@@ -18,7 +18,7 @@ export async function getStaticProps() {
 }
 
 export default function Servizi({ page }) {
-  console.log(page)
+  // console.log(page)
 
   const serviceList = page.acf.lista
 

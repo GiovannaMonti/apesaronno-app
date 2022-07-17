@@ -18,7 +18,7 @@ export async function getStaticProps() {
 }
 
 export default function ChiSiamo({ page }) {
-  console.log(page)
+  // console.log(page)
 
   const paragraphs = page.blocks.filter(
     (block) => block.blockName === "genesis-custom-blocks/paragrafo-grande"

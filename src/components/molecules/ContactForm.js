@@ -19,7 +19,7 @@ export const ContactForm = () => {
       body: JSON.stringify(data),
     })
 
-    console.log(data)
+    // console.log(data)
   }
 
   return (

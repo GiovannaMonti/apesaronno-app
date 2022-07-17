@@ -31,7 +31,7 @@ export default function News({ page }) {
 
   const isArticlesListEmpty = articles?.length === 0
 
-  console.log("page: ", page)
+  // console.log("page: ", page)
   return (
     <>
       <Menu />

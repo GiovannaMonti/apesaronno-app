@@ -22,7 +22,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ page }) {
-  console.log(page)
+  // console.log(page)
 
   const IS_COURTESY_PAGE = true
   return (

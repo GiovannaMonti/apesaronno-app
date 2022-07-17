@@ -19,7 +19,7 @@ export async function getStaticProps() {
 }
 
 export default function Contatti({ page }) {
-  console.log("page: ", page)
+  // console.log("page: ", page)
   return (
     <>
       <Menu />
