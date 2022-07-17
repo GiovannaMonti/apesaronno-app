@@ -11,6 +11,7 @@
   "dependencies": {
     "@react-hook/size": "^2.1.2",
     "autoprefixer": "^10.4.7",
+    "isomorphic-unfetch": "^3.1.0",
     "keen-slider": "^6.7.0",
     "lodash": "^4.17.21",
     "next": "12.2.1",
