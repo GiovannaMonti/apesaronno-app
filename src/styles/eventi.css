@@ -1,0 +1,39 @@
+.p-eventi {
+  h1 {
+    padding: 1rem 16px;
+  }
+
+  h3 {
+    color: #ce6c47;
+  }
+
+  .o-event-section {
+    gap: 40px;
+
+    .m-desc {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+
+@media (min-width: 850px) {
+  .p-eventi {
+    h1 {
+      padding: 5rem 60px;
+      text-align: center;
+    }
+
+    .o-event-section {
+      justify-content: space-between;
+      gap: 3rem;
+
+      .m-desc {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+}
