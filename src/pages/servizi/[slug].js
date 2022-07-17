@@ -8,7 +8,7 @@ import { Calendar } from "../../components/molecules/Calendar"
 import { Footer } from "../../components/organisms/Footer"
 
 export async function getStaticPaths() {
-  const paths = await getSlugs("posts")
+  const paths = await getSlugs("pages")
 
   return {
     paths,
