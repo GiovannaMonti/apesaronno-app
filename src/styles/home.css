@@ -11,6 +11,19 @@
   .m-page-intro {
     height: calc(100vh - 90px);
   }
+
+  .m-courtesy-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    h2 {
+      color: #ce6c47;
+    }
+  }
 }
 
 @media (min-width: 850px) {

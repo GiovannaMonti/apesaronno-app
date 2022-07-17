@@ -24,9 +24,10 @@ export async function getStaticProps() {
 export default function Home({ page }) {
   console.log(page)
 
+  const IS_COURTESY_PAGE = true
   return (
     <>
-      <Menu />
+      {!IS_COURTESY_PAGE && <Menu />}
       <div className="p-home">
         <Head>
           <title>{page.title.rendered} | A.P.E. Saronno</title>
@@ -36,25 +37,34 @@ export default function Home({ page }) {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
+        {!IS_COURTESY_PAGE && (
+          <>
+            <main>
+              <section className="m-page-intro">
+                <h1>{page.title.rendered}</h1>
+                <PageSubtitle page={page} />
+              </section>
 
-        <main>
-          <section className="m-page-intro">
-            <h1>{page.title.rendered}</h1>
-            <PageSubtitle page={page} />
-          </section>
+              <TextSlider page={page} />
 
-          <TextSlider page={page} />
+              <ContactCard page={page} />
 
-          <ContactCard page={page} />
+              <EventSection />
 
-          <EventSection />
+              <ArticleSection />
 
-          <ArticleSection />
+              <NewsletterCard page={page} />
+            </main>
 
-          <NewsletterCard page={page} />
-        </main>
-
-        <Footer page={page} />
+            <Footer page={page} />
+          </>
+        )}
+        {IS_COURTESY_PAGE && (
+          <main className="m-courtesy-content">
+            <h2>Sito in costruzione.</h2>
+            <p className="link">Saremo online presto!</p>
+          </main>
+        )}
       </div>
     </>
   )
