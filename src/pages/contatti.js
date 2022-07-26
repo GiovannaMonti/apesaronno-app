@@ -3,6 +3,7 @@ import Head from "next/head"
 import { fetchSinglePage } from "../utils/fetch"
 import { useEffect } from "react"
 import AOS from "aos"
+import { AOS_CONFIG } from "../utils/aos"
 import "aos/dist/aos.css"
 
 import { Menu } from "../components/molecules/Menu"
@@ -22,11 +23,7 @@ export async function getStaticProps() {
 
 export default function Contatti({ page }) {
   useEffect(() => {
-    AOS.init({
-      once: true,
-      duration: 800,
-      easing: "ease-in-out",
-    })
+    AOS.init(AOS_CONFIG)
     AOS.refresh()
   }, [])
 

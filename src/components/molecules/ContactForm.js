@@ -2,15 +2,12 @@ import { useState, useEffect } from "react"
 import { Button } from "../atoms/Button"
 import axios from "axios"
 import AOS from "aos"
+import { AOS_CONFIG } from "../../utils/aos"
 import "aos/dist/aos.css"
 
 export const ContactForm = () => {
   useEffect(() => {
-    AOS.init({
-      once: true,
-      duration: 800,
-      easing: "ease-in-out",
-    })
+    AOS.init(AOS_CONFIG)
     AOS.refresh()
   }, [])
 

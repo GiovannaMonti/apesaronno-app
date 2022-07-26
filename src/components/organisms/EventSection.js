@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { sortBy } from "lodash"
 import AOS from "aos"
+import { AOS_CONFIG } from "../../utils/aos"
 import "aos/dist/aos.css"
 
 import { Button } from "../atoms/Button"

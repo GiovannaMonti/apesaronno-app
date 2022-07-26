@@ -2,6 +2,7 @@ import Head from "next/head"
 import { useState, useEffect } from "react"
 import { sortBy } from "lodash"
 import AOS from "aos"
+import { AOS_CONFIG } from "../utils/aos"
 import "aos/dist/aos.css"
 
 import { Menu } from "../components/molecules/Menu"
@@ -36,11 +37,7 @@ export default function Eventi({ page }) {
       const sortedEventList = sortBy(upcomingEventList, ["date"])
       setUpcomingEvents(sortedEventList)
 
-      AOS.init({
-        once: true,
-        duration: 800,
-        easing: "ease-in-out",
-      })
+      AOS.init(AOS_CONFIG)
       AOS.refresh()
     })()
   }, [])

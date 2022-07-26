@@ -1,5 +1,8 @@
 import Head from "next/head"
 import { useState, useEffect } from "react"
+import AOS from "aos"
+import { AOS_CONFIG } from "../utils/aos"
+import "aos/dist/aos.css"
 
 import { Menu } from "../components/molecules/Menu"
 import { ArticleCard } from "../components/molecules/ArticleCard"
@@ -26,6 +29,9 @@ export default function News({ page }) {
 
       setArticles(articleList)
     })()
+
+    AOS.init(AOS_CONFIG)
+    AOS.refresh()
   }, [])
 
   const isArticlesListEmpty = articles?.length === 0

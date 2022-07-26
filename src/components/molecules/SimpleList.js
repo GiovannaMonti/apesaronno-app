@@ -1,5 +1,6 @@
 import Link from "next/link"
 import AOS from "aos"
+import { AOS_CONFIG } from "../../utils/aos"
 import { useEffect } from "react"
 
 import { ArrowRight } from "../atoms/ArrowRight"

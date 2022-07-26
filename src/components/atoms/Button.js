@@ -1,15 +1,12 @@
 import AOS from "aos"
+import { AOS_CONFIG } from "../../utils/aos"
 import { useEffect } from "react"
 import "aos/dist/aos.css"
 import Link from "next/link"
 
 export const Button = ({ label, url, color, size, isSubmit }) => {
   useEffect(() => {
-    AOS.init({
-      once: true,
-      duration: 800,
-      easing: "ease-in-out",
-    })
+    AOS.init(AOS_CONFIG)
     AOS.refresh()
   }, [])
 

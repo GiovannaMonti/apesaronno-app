@@ -1,6 +1,7 @@
 import { getPageBySlug, getSlugs } from "../../utils/fetch"
 import Head from "next/dist/shared/lib/head"
 import AOS from "aos"
+import { AOS_CONFIG } from "../../utils/aos"
 import { useEffect } from "react"
 import "aos/dist/aos.css"
 
@@ -32,11 +33,7 @@ export async function getStaticProps({ params }) {
 
 export default function Servizio({ page }) {
   useEffect(() => {
-    AOS.init({
-      once: true,
-      duration: 800,
-      easing: "ease-in-out",
-    })
+    AOS.init(AOS_CONFIG)
     AOS.refresh()
   }, [])
 

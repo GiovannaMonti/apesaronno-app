@@ -2,6 +2,7 @@ import Head from "next/head"
 import sanitizeHtml from "sanitize-html"
 import { useEffect } from "react"
 import AOS from "aos"
+import { AOS_CONFIG } from "../../utils/aos"
 import "aos/dist/aos.css"
 
 import { Menu } from "../../components/molecules/Menu"
@@ -32,11 +33,7 @@ export async function getStaticProps({ params }) {
 
 export default function Article({ post }) {
   useEffect(() => {
-    AOS.init({
-      once: true,
-      duration: 800,
-      easing: "ease-in-out",
-    })
+    AOS.init(AOS_CONFIG)
     AOS.refresh()
   }, [])
 

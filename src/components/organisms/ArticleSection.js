@@ -1,4 +1,5 @@
 import AOS from "aos"
+import { AOS_CONFIG } from "../../utils/aos"
 import { useState, useEffect } from "react"
 import "aos/dist/aos.css"
 
@@ -15,11 +16,7 @@ export const ArticleSection = () => {
       setLatestArticles(articleList.slice(0, 4))
     })()
 
-    AOS.init({
-      once: true,
-      duration: 800,
-      easing: "ease-in-out",
-    })
+    AOS.init(AOS_CONFIG)
     AOS.refresh()
   }, [])
 
