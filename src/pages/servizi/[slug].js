@@ -1,5 +1,9 @@
 import { getPageBySlug, getSlugs } from "../../utils/fetch"
 import Head from "next/dist/shared/lib/head"
+import AOS from "aos"
+import { AOS_CONFIG } from "../../utils/aos"
+import { useEffect } from "react"
+import "aos/dist/aos.css"
 
 import { Menu } from "../../components/molecules/Menu"
 import { PageSubtitle } from "../../components/molecules/PageSubtitle"
@@ -28,7 +32,11 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Servizio({ page }) {
-  // console.log("page: ", page)
+  useEffect(() => {
+    AOS.init(AOS_CONFIG)
+    AOS.refresh()
+  }, [])
+
   return (
     <>
       <Menu />
@@ -44,7 +52,7 @@ export default function Servizio({ page }) {
 
         <main>
           <section className="m-page-intro">
-            <h1>{page.title.rendered}</h1>
+            <h1 data-aos="fade">{page.title.rendered}</h1>
             <PageSubtitle page={page} />
           </section>
 

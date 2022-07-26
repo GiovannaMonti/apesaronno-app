@@ -25,3 +25,16 @@
 @import "news.css";
 @import "single-article.css";
 @import "eventi.css";
+
+/* animations */
+
+[data-aos="smooth-fade-up"] {
+  transform: translateY(15px);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="smooth-fade-up"].aos-animate {
+  transform: translateY(0px);
+  opacity: 1;
+}
