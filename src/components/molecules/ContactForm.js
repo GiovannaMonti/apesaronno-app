@@ -79,7 +79,7 @@ export const ContactForm = () => {
           id="name"
           type="text"
           onChange={handleOnChange}
-          value={inputs.email}
+          value={inputs.name}
           required
         />
 
