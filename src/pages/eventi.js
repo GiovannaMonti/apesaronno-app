@@ -44,7 +44,6 @@ export default function Eventi({ page }) {
 
   const isEventsListEmpty = upcomingEvents?.length === 0
 
-  // console.log("page: ", page)
   return (
     <>
       <Menu />
