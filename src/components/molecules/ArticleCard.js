@@ -1,7 +1,19 @@
 import Link from "next/link"
 import sanitizeHtml from "sanitize-html"
+import { useEffect } from "react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 export const ArticleCard = ({ article }) => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: "ease-in-out",
+    })
+    AOS.refresh()
+  }, [])
+
   const { title, date, slug, excerpt } = article
 
   const articleDateTime = new Date(Date.parse(date))
@@ -11,7 +23,7 @@ export const ArticleCard = ({ article }) => {
   const year = articleDateTime.getFullYear()
 
   return (
-    <div className="m-article-card">
+    <div className="m-article-card" data-aos="fade">
       <div className="m-article-info">
         <div className="a-date link">
           {day} {month} {year}

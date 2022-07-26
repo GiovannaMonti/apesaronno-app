@@ -1,4 +1,6 @@
+import AOS from "aos"
 import { useState, useEffect } from "react"
+import "aos/dist/aos.css"
 
 import { fetchArticles } from "../../utils/fetch"
 import { ArticleCard } from "../molecules/ArticleCard"
@@ -12,6 +14,13 @@ export const ArticleSection = () => {
 
       setLatestArticles(articleList.slice(0, 4))
     })()
+
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: "ease-in-out",
+    })
+    AOS.refresh()
   }, [])
 
   const isArticlesListEmpty = latestArticles?.length === 0
@@ -22,7 +31,7 @@ export const ArticleSection = () => {
 
       <div className="m-latest-articles">
         {!isArticlesListEmpty && (
-          <div className="first-row">
+          <div className="first-row" data-aos="smooth-fade-up">
             {latestArticles?.slice(0, 2).map((article) => (
               <ArticleCard key={article.slug} article={article} />
             ))}
@@ -30,7 +39,11 @@ export const ArticleSection = () => {
         )}
 
         {!isArticlesListEmpty && (
-          <div className="second-row">
+          <div
+            className="second-row"
+            data-aos="smooth-fade-up"
+            data-aos-delay="200"
+          >
             {latestArticles?.slice(2, 4).map((article) => (
               <ArticleCard key={article.slug} article={article} />
             ))}

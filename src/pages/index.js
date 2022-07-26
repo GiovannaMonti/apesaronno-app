@@ -1,4 +1,7 @@
 import Head from "next/head"
+import AOS from "aos"
+import { useEffect } from "react"
+import "aos/dist/aos.css"
 
 import { Menu } from "../components/molecules/Menu"
 import { PageSubtitle } from "../components/molecules/PageSubtitle"
@@ -21,9 +24,16 @@ export async function getStaticProps() {
 }
 
 export default function Home({ page }) {
-  // console.log(page)
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: "ease-in-out",
+    })
+    AOS.refresh()
+  }, [])
 
-  const IS_COURTESY_PAGE = true
+  const IS_COURTESY_PAGE = false
   return (
     <>
       {!IS_COURTESY_PAGE && <Menu />}
@@ -40,7 +50,7 @@ export default function Home({ page }) {
           <>
             <main>
               <section className="m-page-intro">
-                <h1>{page.title.rendered}</h1>
+                <h1 data-aos="fade">{page.title.rendered}</h1>
                 <PageSubtitle page={page} />
               </section>
 

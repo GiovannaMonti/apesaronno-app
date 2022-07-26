@@ -30,7 +30,6 @@ export default function News({ page }) {
 
   const isArticlesListEmpty = articles?.length === 0
 
-  // console.log("page: ", page)
   return (
     <>
       <Menu />
@@ -45,7 +44,7 @@ export default function News({ page }) {
         </Head>
 
         <main>
-          <h1>{page.title.rendered}</h1>
+          <h1 data-aos="fade">{page.title.rendered}</h1>
 
           <section className="o-article-section">
             {!isArticlesListEmpty && (

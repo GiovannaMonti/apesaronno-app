@@ -1,6 +1,20 @@
+import AOS from "aos"
+import { useEffect } from "react"
+
 import { NewsletterForm } from "../molecules/NewsletterForm"
 
+import "aos/dist/aos.css"
+
 export const NewsletterCard = ({ page }) => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: "ease-in-out",
+    })
+    AOS.refresh()
+  }, [])
+
   const newsletterBlock = page.blocks.find(
     (block) => block.blockName === "genesis-custom-blocks/newsletter"
   )
@@ -11,7 +25,7 @@ export const NewsletterCard = ({ page }) => {
     <>
       {newsletterBlock && (
         <div className="o-newsletter">
-          <div className="m-newsletter-text-wrapper">
+          <div className="m-newsletter-text-wrapper" data-aos="smooth-fade-up">
             <h3 className="a-newsletter-label">{etichetta}</h3>
             <h2 className="a-newsletter-title">{titolo}</h2>
             <p className="a-newsletter-desc">{descrizione}</p>

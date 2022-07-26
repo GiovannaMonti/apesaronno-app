@@ -1,8 +1,19 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "../atoms/Button"
 import axios from "axios"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 export const ContactForm = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: "ease-in-out",
+    })
+    AOS.refresh()
+  }, [])
+
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
@@ -64,7 +75,7 @@ export const ContactForm = () => {
   }
 
   return (
-    <section className="o-contact-form">
+    <section className="o-contact-form" data-aos="smooth-fade-up">
       <form onSubmit={handleOnSubmit}>
         <label htmlFor="name">Nome</label>
         <input

@@ -1,8 +1,21 @@
+import AOS from "aos"
+import { useEffect } from "react"
+import "aos/dist/aos.css"
+
 export const Calendar = ({ page }) => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: "ease-in-out",
+    })
+    AOS.refresh()
+  }, [])
+
   const calendarItems = page.acf.programma
 
   return (
-    <div className="m-calendar">
+    <div className="m-calendar" data-aos="smooth-fade-up">
       <h5 className="a-calendar-header">Calendario</h5>
 
       <div className="m-calendar-items">

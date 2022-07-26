@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react"
 import { sortBy } from "lodash"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 import { Button } from "../atoms/Button"
 import { fetchEvents } from "../../utils/fetch"
@@ -20,6 +22,13 @@ export const EventSection = () => {
 
       const sortedEventList = sortBy(upcomingEventList, ["date"]).slice(0, 2)
       setUpcomingEvents(sortedEventList)
+
+      AOS.init({
+        once: true,
+        duration: 800,
+        easing: "ease-in-out",
+      })
+      AOS.refresh()
     })()
   }, [])
 
@@ -44,8 +53,14 @@ export const EventSection = () => {
       <div className="m-upcoming-events">
         <h3>Prossimi Eventi</h3>
         {!isUpcomingEventsEmpty &&
-          upcomingEvents?.map((event) => (
-            <EventCard key={event.title.rendered} event={event} />
+          upcomingEvents?.map((event, index) => (
+            <div
+              key={event.title.rendered}
+              data-aos="smooth-fade-up"
+              data-aos-delay={index * 200}
+            >
+              <EventCard event={event} />
+            </div>
           ))}
         {isUpcomingEventsEmpty && (
           <div className="a-no-events">

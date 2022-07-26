@@ -12,18 +12,20 @@ export const AccordionCard = ({ page }) => {
   return (
     <section className="m-accordion-card">
       <Accordion allowZeroExpanded={true}>
-        {accordionItems.map((item) => {
+        {accordionItems.map((item, index) => {
           const { titolo, descrizione } = item
 
           return (
-            <AccordionItem key={titolo}>
-              <AccordionItemHeading aria-level={3}>
-                <AccordionItemButton>{titolo} </AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <p>{descrizione}</p>
-              </AccordionItemPanel>
-            </AccordionItem>
+            <div key={titolo} data-aos="fade-left" data-aos-delay={index * 100}>
+              <AccordionItem>
+                <AccordionItemHeading aria-level={3}>
+                  <AccordionItemButton>{titolo} </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <p>{descrizione}</p>
+                </AccordionItemPanel>
+              </AccordionItem>
+            </div>
           )
         })}
       </Accordion>

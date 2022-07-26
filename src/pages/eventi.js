@@ -1,6 +1,8 @@
 import Head from "next/head"
 import { useState, useEffect } from "react"
 import { sortBy } from "lodash"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 import { Menu } from "../components/molecules/Menu"
 import { EventCard } from "../components/molecules/EventCard"
@@ -33,6 +35,13 @@ export default function Eventi({ page }) {
 
       const sortedEventList = sortBy(upcomingEventList, ["date"])
       setUpcomingEvents(sortedEventList)
+
+      AOS.init({
+        once: true,
+        duration: 800,
+        easing: "ease-in-out",
+      })
+      AOS.refresh()
     })()
   }, [])
 
@@ -53,7 +62,7 @@ export default function Eventi({ page }) {
         </Head>
 
         <main>
-          <h1>{page.title.rendered}</h1>
+          <h1 data-aos="fade">{page.title.rendered}</h1>
 
           <section className="o-event-section">
             <div className="m-desc">
@@ -66,8 +75,14 @@ export default function Eventi({ page }) {
             </div>
             {!isEventsListEmpty && (
               <div className="m-events">
-                {upcomingEvents?.map((event) => (
-                  <EventCard key={event.slug} event={event} />
+                {upcomingEvents?.map((event, index) => (
+                  <div
+                    key={event.slug}
+                    data-aos="smooth-fade-up"
+                    data-aos-delay={index * 100}
+                  >
+                    <EventCard event={event} />
+                  </div>
                 ))}
               </div>
             )}

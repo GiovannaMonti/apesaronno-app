@@ -1,5 +1,8 @@
 import Head from "next/head"
 import sanitizeHtml from "sanitize-html"
+import { useEffect } from "react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 import { Menu } from "../../components/molecules/Menu"
 import { Footer } from "../../components/organisms/Footer"
@@ -28,7 +31,14 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Article({ post }) {
-  // console.log("post: ", post)
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: "ease-in-out",
+    })
+    AOS.refresh()
+  }, [])
 
   const blocks = post.blocks
 
@@ -52,7 +62,7 @@ export default function Article({ post }) {
         </Head>
 
         <main>
-          <h1>{post.title.rendered}</h1>
+          <h1 data-aos="fade">{post.title.rendered}</h1>
 
           <section className="m-article-content-wrapper">
             <span className="a-publish-date link">{formatDate(post.date)}</span>

@@ -1,6 +1,20 @@
+import AOS from "aos"
+import { useEffect } from "react"
+
 import { Button } from "../atoms/Button"
 
+import "aos/dist/aos.css"
+
 export const PageSubtitle = ({ page }) => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: "ease-in-out",
+    })
+    AOS.refresh()
+  }, [])
+
   const pageSubtitle = page.blocks.find(
     (block) =>
       block.blockName ===
@@ -14,7 +28,9 @@ export const PageSubtitle = ({ page }) => {
     <>
       {pageSubtitle && (
         <>
-          <p className="a-page-subtitle p-big">{sottotitolo}</p>
+          <p className="a-page-subtitle p-big" data-aos="smooth-fade-up">
+            {sottotitolo}
+          </p>
 
           {bottone && (
             <Button

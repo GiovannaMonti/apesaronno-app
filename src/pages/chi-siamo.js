@@ -1,6 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head"
 import { fetchSinglePage } from "../utils/fetch"
+import { useEffect } from "react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 import { Menu } from "../components/molecules/Menu"
 import { SimpleList } from "../components/molecules/SimpleList"
@@ -17,7 +20,14 @@ export async function getStaticProps() {
 }
 
 export default function ChiSiamo({ page }) {
-  // console.log(page)
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: "ease-in-out",
+    })
+    AOS.refresh()
+  }, [])
 
   const paragraphs = page.blocks.filter(
     (block) => block.blockName === "genesis-custom-blocks/paragrafo-grande"
@@ -39,7 +49,7 @@ export default function ChiSiamo({ page }) {
         </Head>
 
         <main>
-          <h1>{page.title.rendered}</h1>
+          <h1 data-aos="fade">{page.title.rendered}</h1>
 
           <section className="m-description">
             <img
@@ -50,7 +60,7 @@ export default function ChiSiamo({ page }) {
             />
 
             {paragraphs.map((p, index) => (
-              <p key={index} className="p-big-serif">
+              <p key={index} className="p-big-serif" data-aos="fade">
                 {p.attrs.testo}
               </p>
             ))}
