@@ -1,31 +1,38 @@
 import { WP_REST } from "./url"
 
+// Set custom user agent to avoid 403 Forbidden error on fetch
+const headers = new Headers({
+  "User-Agent": "Mozilla/5.0",
+})
+
 export async function fetchMenuItems() {
-  const src = await fetch(`${WP_REST}/menu`)
+  const src = await fetch(`${WP_REST}/menu`, { headers: headers })
   const resp = await src.json()
   return resp
 }
 
 export async function fetchPages() {
-  const src = await fetch(`${WP_REST}/pages/`)
+  const src = await fetch(`${WP_REST}/pages/`, { headers: headers })
   const resp = await src.json()
   return [...resp]
 }
 
 export async function fetchSinglePage(id) {
-  const src = await fetch(`${WP_REST}/pages/${id}`)
+  const src = await fetch(`${WP_REST}/pages/${id}`, { headers: headers })
   const resp = await src.json()
   return resp
 }
 
 export async function fetchEvents() {
-  const src = await fetch(`${WP_REST}/eventi/?per_page=15`)
+  const src = await fetch(`${WP_REST}/eventi/?per_page=15`, {
+    headers: headers,
+  })
   const resp = await src.json()
   return resp
 }
 
 export async function fetchArticles() {
-  const src = await fetch(`${WP_REST}/posts/?per_page=15`)
+  const src = await fetch(`${WP_REST}/posts/?per_page=15`, { headers: headers })
   const resp = await src.json()
   return resp
 }
