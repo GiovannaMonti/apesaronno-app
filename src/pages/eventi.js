@@ -82,6 +82,13 @@ export default function Eventi({ page }) {
                 ))}
               </div>
             )}
+            {isEventsListEmpty && (
+              <div className="a-no-events">
+                <p className="link" style={{ minWidth: "40vw" }}>
+                  Al momento non ci sono eventi in programma.
+                </p>
+              </div>
+            )}
           </section>
 
           <NewsletterCard page={page} />
