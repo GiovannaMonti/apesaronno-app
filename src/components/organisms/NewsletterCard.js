@@ -16,7 +16,7 @@ export const NewsletterCard = ({ page }) => {
     (block) => block.blockName === "genesis-custom-blocks/newsletter"
   )
 
-  const { etichetta, titolo, descrizione } = newsletterBlock?.attrs || null
+  const { etichetta, titolo, descrizione } = newsletterBlock?.attrs || {}
 
   return (
     <>

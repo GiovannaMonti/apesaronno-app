@@ -19,7 +19,7 @@ export const PageSubtitle = ({ page }) => {
       block.blockName === "genesis-custom-blocks/sottotitolo-pagina"
   )
 
-  const { sottotitolo, bottone } = pageSubtitle?.attrs || ""
+  const { sottotitolo, bottone } = pageSubtitle?.attrs || {}
 
   return (
     <>

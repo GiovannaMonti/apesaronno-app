@@ -14,15 +14,19 @@ export const ContactCard = ({ page }) => {
     (block) => block.blockName === "genesis-custom-blocks/card-contattaci"
   )
 
-  const { titolo, descrizione, bottone: url } = card.attrs
+  const { titolo, descrizione, bottone: url } = card?.attrs || {}
 
   return (
-    <section className="m-contact-card" data-aos="smooth-fade-up">
-      <div className="m-card-wrapper">
-        <h3>{titolo}</h3>
-        <p>{descrizione}</p>
-        <Button label="Contattaci" url={url} color="red" size="small" />
-      </div>
-    </section>
+    <>
+      {card && (
+        <section className="m-contact-card" data-aos="smooth-fade-up">
+          <div className="m-card-wrapper">
+            <h3>{titolo}</h3>
+            <p>{descrizione}</p>
+            <Button label="Contattaci" url={url} color="red" size="small" />
+          </div>
+        </section>
+      )}
+    </>
   )
 }
