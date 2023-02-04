@@ -20,6 +20,7 @@ export const ContactForm = () => {
   const [inputs, setInputs] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   })
 
@@ -33,6 +34,7 @@ export const ContactForm = () => {
       setInputs({
         name: "",
         email: "",
+        phone: "",
         message: "",
       })
     } else {
@@ -90,6 +92,15 @@ export const ContactForm = () => {
           name="_replyto"
           onChange={handleOnChange}
           value={inputs.email}
+          required
+        />
+
+        <label htmlFor="phone">Telefono</label>
+        <input
+          id="phone"
+          type="text"
+          onChange={handleOnChange}
+          value={inputs.phone}
           required
         />
 
