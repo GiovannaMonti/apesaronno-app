@@ -1,0 +1,12 @@
+.p-policy {
+  padding: 3rem 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+@media (min-width: 850px) {
+  .p-policy {
+    padding: 5rem 60px;
+  }
+}

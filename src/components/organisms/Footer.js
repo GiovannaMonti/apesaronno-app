@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Logo } from "../atoms/Logo"
 
 export const Footer = ({ page }) => {
@@ -65,6 +66,23 @@ export const Footer = ({ page }) => {
         <p className="p-small">
           {indirizzo} - {cap} {citta}
         </p>
+      </div>
+
+      <div className="a-copyright">
+        <Link
+          href={"https://www.apesaronno.it/privacy-policy"}
+          target={"_blank"}
+          rel={"noopener noreferrer"}
+        >
+          Privacy Policy
+        </Link>
+        <Link
+          href={"https://www.apesaronno.it/cookie-policy"}
+          target={"_blank"}
+          rel={"noopener noreferrer"}
+        >
+          Cookie Policy
+        </Link>
       </div>
     </footer>
   )
