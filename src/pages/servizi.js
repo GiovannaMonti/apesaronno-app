@@ -9,6 +9,7 @@ import { PageSubtitle } from "../components/molecules/PageSubtitle"
 import { SimpleList } from "../components/molecules/SimpleList"
 import { NewsletterCard } from "../components/organisms/NewsletterCard"
 import { Footer } from "../components/organisms/Footer"
+import { CookieConsent } from "../components/organisms/CookieBanner"
 
 import { fetchSinglePage } from "../utils/fetch"
 
@@ -43,6 +44,8 @@ export default function Servizi({ page }) {
         </Head>
 
         <main>
+          <CookieConsent />
+
           <section className="m-page-intro">
             <h1 data-aos="fade">{page.title.rendered}</h1>
             <PageSubtitle page={page} />

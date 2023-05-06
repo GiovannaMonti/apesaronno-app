@@ -6,6 +6,7 @@ import { AOS_CONFIG } from "../../utils/aos"
 import "aos/dist/aos.css"
 
 import { Menu } from "../../components/molecules/Menu"
+import { CookieConsent } from "../../components/organisms/CookieBanner"
 import { Footer } from "../../components/organisms/Footer"
 
 import { formatDate } from "../../utils/date"
@@ -59,6 +60,8 @@ export default function Article({ post }) {
         </Head>
 
         <main>
+          <CookieConsent />
+
           <h1 data-aos="fade">{post.title.rendered}</h1>
 
           <section className="m-article-content-wrapper">

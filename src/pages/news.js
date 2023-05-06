@@ -8,6 +8,7 @@ import { Menu } from "../components/molecules/Menu"
 import { ArticleCard } from "../components/molecules/ArticleCard"
 import { NewsletterCard } from "../components/organisms/NewsletterCard"
 import { Footer } from "../components/organisms/Footer"
+import { CookieConsent } from "../components/organisms/CookieBanner"
 
 import { fetchSinglePage, fetchArticles } from "../utils/fetch"
 
@@ -50,6 +51,8 @@ export default function News({ page }) {
         </Head>
 
         <main>
+          <CookieConsent />
+
           <h1 data-aos="fade">{page.title.rendered}</h1>
 
           <section className="o-article-section">

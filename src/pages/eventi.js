@@ -9,6 +9,7 @@ import { Menu } from "../components/molecules/Menu"
 import { EventCard } from "../components/molecules/EventCard"
 import { NewsletterCard } from "../components/organisms/NewsletterCard"
 import { Footer } from "../components/organisms/Footer"
+import { CookieConsent } from "../components/organisms/CookieBanner"
 
 import { fetchSinglePage, fetchEvents } from "../utils/fetch"
 
@@ -58,6 +59,7 @@ export default function Eventi({ page }) {
         </Head>
 
         <main>
+          <CookieConsent />
           <h1 data-aos="fade">{page.title.rendered}</h1>
 
           <section className="o-event-section">

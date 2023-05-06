@@ -11,6 +11,7 @@ import { PageSubtitle } from "../components/molecules/PageSubtitle"
 import { NewsletterCard } from "../components/organisms/NewsletterCard"
 import { Footer } from "../components/organisms/Footer"
 import { ContactForm } from "../components/molecules/ContactForm"
+import { CookieConsent } from "../components/organisms/CookieBanner"
 
 export async function getStaticProps() {
   return {
@@ -41,6 +42,8 @@ export default function Contatti({ page }) {
         </Head>
 
         <main>
+          <CookieConsent />
+
           <section className="m-page-intro">
             <h1 data-aos="fade">{page.title.rendered}</h1>
             <PageSubtitle page={page} />

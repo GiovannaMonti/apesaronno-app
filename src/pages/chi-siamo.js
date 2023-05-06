@@ -10,6 +10,7 @@ import { Menu } from "../components/molecules/Menu"
 import { SimpleList } from "../components/molecules/SimpleList"
 import { NewsletterCard } from "../components/organisms/NewsletterCard"
 import { Footer } from "../components/organisms/Footer"
+import { CookieConsent } from "../components/organisms/CookieBanner"
 
 export async function getStaticProps() {
   return {
@@ -46,6 +47,8 @@ export default function ChiSiamo({ page }) {
         </Head>
 
         <main>
+          <CookieConsent />
+
           <h1 data-aos="fade">{page.title.rendered}</h1>
 
           <section className="m-description">

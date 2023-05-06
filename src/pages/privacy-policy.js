@@ -1,6 +1,7 @@
 import Head from "next/head"
 
 import { Menu } from "../components/molecules/Menu"
+import { CookieConsent } from "../components/organisms/CookieBanner"
 import { Footer } from "../components/organisms/Footer"
 
 import { fetchSinglePage } from "../utils/fetch"
@@ -27,6 +28,8 @@ export default function PrivacyPolicy({ page }) {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
+
+        <CookieConsent />
 
         <h1>Privacy Policy</h1>
         <p>Last updated: May 06, 2023</p>

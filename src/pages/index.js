@@ -12,6 +12,7 @@ import { EventSection } from "../components/organisms/EventSection"
 import { ArticleSection } from "../components/organisms/ArticleSection"
 import { NewsletterCard } from "../components/organisms/NewsletterCard"
 import { Footer } from "../components/organisms/Footer"
+import { CookieConsent } from "../components/organisms/CookieBanner"
 
 import { fetchSinglePage } from "../utils/fetch"
 
@@ -46,6 +47,8 @@ export default function Home({ page }) {
         {!IS_COURTESY_PAGE && (
           <>
             <main>
+              <CookieConsent />
+
               <section className="m-page-intro">
                 <h1 data-aos="fade">{page.title.rendered}</h1>
                 <PageSubtitle page={page} />
