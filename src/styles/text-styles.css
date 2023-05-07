@@ -79,7 +79,7 @@ p {
 
 .p-big-serif {
   font-family: Canela Light, Arial, Helvetica, sans-serif;
-  font-size: 31px;
+  font-size: 25px;
   line-height: 41px;
 }
 
@@ -147,8 +147,8 @@ p {
 
   .p-big-serif {
     font-family: Canela Light, Arial, Helvetica, sans-serif;
-    font-size: 48px;
-    line-height: 70px;
+    font-size: 32px;
+    line-height: 45px;
   }
 
   .p-small {
