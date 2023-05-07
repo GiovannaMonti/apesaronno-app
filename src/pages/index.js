@@ -31,7 +31,7 @@ export default function Home({ page }) {
     AOS.refresh()
   }, [])
 
-  const IS_COURTESY_PAGE = false
+  const IS_COURTESY_PAGE = true
   return (
     <>
       {!IS_COURTESY_PAGE && <Menu />}
