@@ -13,6 +13,7 @@ import { ArticleSection } from "../components/organisms/ArticleSection"
 import { NewsletterCard } from "../components/organisms/NewsletterCard"
 import { Footer } from "../components/organisms/Footer"
 import { CookieConsent } from "../components/organisms/CookieBanner"
+import { IS_COURTESY_PAGE } from "../constants"
 
 import { fetchSinglePage } from "../utils/fetch"
 
@@ -31,7 +32,6 @@ export default function Home({ page }) {
     AOS.refresh()
   }, [])
 
-  const IS_COURTESY_PAGE = true
   return (
     <>
       {!IS_COURTESY_PAGE && <Menu />}

@@ -12,6 +12,7 @@ import { NewsletterCard } from "../components/organisms/NewsletterCard"
 import { Footer } from "../components/organisms/Footer"
 import { ContactForm } from "../components/molecules/ContactForm"
 import { CookieConsent } from "../components/organisms/CookieBanner"
+import { IS_COURTESY_PAGE } from "../constants"
 
 export async function getStaticProps() {
   return {
@@ -30,7 +31,7 @@ export default function Contatti({ page }) {
 
   return (
     <>
-      <Menu />
+      {!IS_COURTESY_PAGE && <Menu />}
       <div className="p-contatti">
         <Head>
           <title>{page.title.rendered} | A.P.E. Saronno</title>
@@ -41,41 +42,52 @@ export default function Contatti({ page }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <main>
-          <CookieConsent />
+        {!IS_COURTESY_PAGE && (
+          <>
+            <main>
+              <CookieConsent />
 
-          <section className="m-page-intro">
-            <h1 data-aos="fade">{page.title.rendered}</h1>
-            <PageSubtitle page={page} />
-          </section>
+              <section className="m-page-intro">
+                <h1 data-aos="fade">{page.title.rendered}</h1>
+                <PageSubtitle page={page} />
+              </section>
 
-          <ContactForm />
+              <ContactForm />
 
-          <section className="m-contacts-wrapper">
-            <div className="m-phone-email">
-              <div className="m-phone" data-aos="fade">
-                <h4>Telefono</h4>
-                <div>
-                  <p>{page.acf.telefono}</p>
-                  <p>{page.acf.apertura_segreteria}</p>
+              <section className="m-contacts-wrapper">
+                <div className="m-phone-email">
+                  <div className="m-phone" data-aos="fade">
+                    <h4>Telefono</h4>
+                    <div>
+                      <p>{page.acf.telefono}</p>
+                      <p>{page.acf.apertura_segreteria}</p>
+                    </div>
+                  </div>
+
+                  <div className="m-email" data-aos="fade" data-aos-delay="200">
+                    <h4>E-mail</h4>
+                    <p>
+                      <a href={`mailto: ${page.acf["e-mail"]}`}>
+                        {page.acf["e-mail"]}
+                      </a>
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </section>
 
-              <div className="m-email" data-aos="fade" data-aos-delay="200">
-                <h4>E-mail</h4>
-                <p>
-                  <a href={`mailto: ${page.acf["e-mail"]}`}>
-                    {page.acf["e-mail"]}
-                  </a>
-                </p>
-              </div>
-            </div>
-          </section>
+              <NewsletterCard page={page} />
+            </main>
 
-          <NewsletterCard page={page} />
-        </main>
+            <Footer page={page} />
+          </>
+        )}
 
-        <Footer page={page} />
+        {IS_COURTESY_PAGE && (
+          <main className="m-courtesy-content">
+            <h2>Sito in costruzione.</h2>
+            <p className="link">Saremo online presto!</p>
+          </main>
+        )}
       </div>
     </>
   )

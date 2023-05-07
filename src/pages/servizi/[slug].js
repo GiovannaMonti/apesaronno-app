@@ -11,6 +11,7 @@ import { AccordionCard } from "../../components/molecules/AccordionCard"
 import { Calendar } from "../../components/molecules/Calendar"
 import { Footer } from "../../components/organisms/Footer"
 import { CookieConsent } from "../../components/organisms/CookieBanner"
+import { IS_COURTESY_PAGE } from "../../constants"
 
 export async function getStaticPaths() {
   const paths = await getSlugs("pages")
@@ -40,7 +41,7 @@ export default function Servizio({ page }) {
 
   return (
     <>
-      <Menu />
+      {!IS_COURTESY_PAGE && <Menu />}
       <div className="p-servizio">
         <Head>
           <title>{page.title.rendered} | A.P.E. Saronno</title>
@@ -51,24 +52,35 @@ export default function Servizio({ page }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <main>
-          <CookieConsent />
+        {!IS_COURTESY_PAGE && (
+          <>
+            <main>
+              <CookieConsent />
 
-          <section className="m-page-intro">
-            <h1 data-aos="fade">{page.title.rendered}</h1>
-            <PageSubtitle page={page} />
-          </section>
+              <section className="m-page-intro">
+                <h1 data-aos="fade">{page.title.rendered}</h1>
+                <PageSubtitle page={page} />
+              </section>
 
-          {page.acf.accordion && <AccordionCard page={page} />}
+              {page.acf.accordion && <AccordionCard page={page} />}
 
-          {page.acf.programma && (
-            <section className="m-calendar-section">
-              <Calendar page={page} />
-            </section>
-          )}
-        </main>
+              {page.acf.programma && (
+                <section className="m-calendar-section">
+                  <Calendar page={page} />
+                </section>
+              )}
+            </main>
 
-        <Footer page={page} />
+            <Footer page={page} />
+          </>
+        )}
+
+        {IS_COURTESY_PAGE && (
+          <main className="m-courtesy-content">
+            <h2>Sito in costruzione.</h2>
+            <p className="link">Saremo online presto!</p>
+          </main>
+        )}
       </div>
     </>
   )

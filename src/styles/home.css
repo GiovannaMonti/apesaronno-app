@@ -11,21 +11,6 @@
   .m-page-intro {
     height: calc(100vh - 90px);
   }
-
-  .m-courtesy-content {
-    padding: 0.5rem 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    text-align: center;
-
-    h2 {
-      color: #ce6c47;
-    }
-  }
 }
 
 @media (min-width: 850px) {
@@ -44,5 +29,20 @@
         text-align: center;
       }
     }
+  }
+}
+
+.m-courtesy-content {
+  padding: 0.5rem 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+
+  h2 {
+    color: #ce6c47;
   }
 }
