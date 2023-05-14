@@ -8,6 +8,23 @@
     flex-direction: column;
     gap: 60px;
   }
+
+  .o-archive {
+    padding: 1rem 16px;
+    background: #f9f1ea;
+
+    .m-list-wrapper {
+      padding: 1rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    h2 {
+      color: #ce6c47;
+      padding: 2rem 0 1rem;
+    }
+  }
 }
 
 @media (min-width: 850px) {
@@ -24,6 +41,17 @@
 
       .m-article-card {
         width: 45%;
+      }
+    }
+
+    .o-archive {
+      padding: 3rem 60px;
+
+      .m-list-wrapper {
+        padding: 3rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
       }
     }
   }

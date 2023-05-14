@@ -5,6 +5,7 @@ import { AOS_CONFIG } from "../utils/aos"
 import "aos/dist/aos.css"
 
 import { Menu } from "../components/molecules/Menu"
+import { SimpleList } from "../components/molecules/SimpleList"
 import { ArticleCard } from "../components/molecules/ArticleCard"
 import { NewsletterCard } from "../components/organisms/NewsletterCard"
 import { Footer } from "../components/organisms/Footer"
@@ -68,6 +69,53 @@ export default function News({ page }) {
                 <p className="link">Al momento non ci sono articoli.</p>
               </div>
             )}
+          </section>
+
+          <section className="o-archive">
+            <h2>Archivio Storico</h2>
+
+            <div className="m-list-wrapper">
+              <SimpleList
+                list={{
+                  titolo: "Notiziari",
+                  elenco: [
+                    {
+                      elemento: (
+                        <a
+                          style={{ textDecoration: "underline" }}
+                          href="https://drive.google.com/drive/folders/1WN_h2HqENEfCfQt3P-z2f7TaNo5CJrEO"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Archivio Notiziari
+                        </a>
+                      ),
+                    },
+                  ],
+                }}
+                color="#454B66"
+              />
+              <SimpleList
+                list={{
+                  titolo: "Convegni",
+                  elenco: [
+                    {
+                      elemento: (
+                        <a
+                          style={{ textDecoration: "underline" }}
+                          href="https://drive.google.com/drive/folders/1Qv1Eg9E8fwnHUDtKVp8pRpUu7qim4FIJ"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Archivio Convegni
+                        </a>
+                      ),
+                    },
+                  ],
+                }}
+                color="#454B66"
+              />
+            </div>
           </section>
 
           <NewsletterCard page={page} />
