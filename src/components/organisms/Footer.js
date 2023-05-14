@@ -68,20 +68,20 @@ export const Footer = ({ page }) => {
         </p>
       </div>
 
-      <div className="a-copyright">
+      <div className="a-policy">
         <Link
           href={"https://www.apesaronno.it/privacy-policy"}
           target={"_blank"}
           rel={"noopener noreferrer"}
         >
-          Privacy Policy
+          <p className="p-small">Privacy Policy</p>
         </Link>
         <Link
           href={"https://www.apesaronno.it/cookie-policy"}
           target={"_blank"}
           rel={"noopener noreferrer"}
         >
-          Cookie Policy
+          <p className="p-small">Cookie Policy</p>
         </Link>
       </div>
     </footer>

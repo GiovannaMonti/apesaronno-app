@@ -67,7 +67,7 @@ export default function ChiSiamo({ page }) {
           </section>
 
           <section className="o-people">
-            <h2>Settori e responsabili</h2>
+            <h2>Il Consiglio Direttivo</h2>
 
             <div className="m-list-wrapper">
               {peopleList.length > 0 &&
