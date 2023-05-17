@@ -36,7 +36,7 @@ export default function Servizi({ page }) {
       {!IS_COURTESY_PAGE && <Menu />}
       <div className="p-servizi">
         <Head>
-          <title>{page.title.rendered} | A.P.E. Saronno</title>
+          <title>{`${page.title.rendered} | A.P.E. Saronno`}</title>
           <meta
             name="description"
             content="I nostri professionisti offrono servizi in tutti gli ambiti dell'edilizia, dalla consulenza legale alla stesura dei contratti di locazione."

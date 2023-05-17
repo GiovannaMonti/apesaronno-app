@@ -34,7 +34,7 @@ export default function Contatti({ page }) {
       {!IS_COURTESY_PAGE && <Menu />}
       <div className="p-contatti">
         <Head>
-          <title>{page.title.rendered} | A.P.E. Saronno</title>
+          <title>{`${page.title.rendered} | A.P.E. Saronno`}</title>
           <meta
             name="description"
             content="Compila il nostro modulo di contatto per chiedere informazioni alla segreteria. Saremo lieti di rispondere alle tue richieste!"

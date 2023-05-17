@@ -50,7 +50,7 @@ export default function Eventi({ page }) {
       <Menu />
       <div className="p-eventi">
         <Head>
-          <title>{page.title.rendered} | A.P.E. Saronno</title>
+          <title>{`${page.title.rendered} | A.P.E. Saronno`}</title>
           <meta
             name="description"
             content="Da sempre organizziamo eventi di divulgazione aperti al pubblico sulle principali novità in ambito edilizio."

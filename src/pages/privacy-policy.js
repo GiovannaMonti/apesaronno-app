@@ -21,7 +21,7 @@ export default function PrivacyPolicy({ page }) {
       <Menu />
       <div className="p-policy">
         <Head>
-          <title>{page.title.rendered} | A.P.E. Saronno</title>
+          <title>{`${page.title.rendered} | A.P.E. Saronno`}</title>
           <meta
             name="description"
             content="Consulta la privacy policy di Associazione proprietà edilizia. Dal 1973 al fianco dei proprietari di case."

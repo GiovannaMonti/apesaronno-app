@@ -44,7 +44,7 @@ export default function Servizio({ page }) {
       {!IS_COURTESY_PAGE && <Menu />}
       <div className="p-servizio">
         <Head>
-          <title>{page.title.rendered} | A.P.E. Saronno</title>
+          <title>{`${page.title.rendered} | A.P.E. Saronno`}</title>
           <meta
             name="description"
             content="Associazione proprietà edilizia. Dal 1973 al fianco dei proprietari di case."

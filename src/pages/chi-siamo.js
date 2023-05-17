@@ -38,7 +38,7 @@ export default function ChiSiamo({ page }) {
       <Menu />
       <div className="p-chi-siamo">
         <Head>
-          <title>{page.title.rendered} | A.P.E. Saronno</title>
+          <title>{`${page.title.rendered} | A.P.E. Saronno`}</title>
           <meta
             name="description"
             content="L'Associazione Proprietà Edilizia nasce nel 1973 come associazione dei Piccoli Proprietari Saronnesi, dedita alla tutela dei proprietari di immobili."

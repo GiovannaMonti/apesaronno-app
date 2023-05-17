@@ -47,7 +47,7 @@ export default function News({ page }) {
       <Menu />
       <div className="p-news">
         <Head>
-          <title>{page.title.rendered} | A.P.E. Saronno</title>
+          <title>{`${page.title.rendered} | A.P.E. Saronno`}</title>
           <meta
             name="description"
             content="Resta sempre al passo con gli ultimi aggiornamenti e consulta il nostro archivio storico con i notiziari e gli eventi passati."

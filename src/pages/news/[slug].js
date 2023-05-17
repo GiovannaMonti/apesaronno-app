@@ -51,7 +51,7 @@ export default function Article({ post }) {
       <Menu />
       <div className="p-article">
         <Head>
-          <title>{post.title.rendered} | A.P.E. Saronno</title>
+          <title>{`${post.title.rendered} | A.P.E. Saronno`}</title>
           <meta
             name="description"
             content={`Associazione proprietà edilizia. ${post.title.rendered}`}
