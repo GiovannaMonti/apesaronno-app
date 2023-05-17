@@ -37,6 +37,10 @@ export default function News({ page }) {
   }, [])
 
   const isArticlesListEmpty = articles?.length === 0
+  const archives = page.acf.lista
+  const archiveLinks = archives
+    .map((archive) => archive.elenco)
+    .map((el) => el[0].elemento)
 
   return (
     <>
@@ -71,52 +75,37 @@ export default function News({ page }) {
             )}
           </section>
 
-          <section className="o-archive">
-            <h2>Archivio Storico</h2>
+          {archives.length > 0 && (
+            <section className="o-archive">
+              <h2>Archivio Storico</h2>
 
-            <div className="m-list-wrapper">
-              <SimpleList
-                list={{
-                  titolo: "Notiziari",
-                  elenco: [
-                    {
-                      elemento: (
-                        <a
-                          style={{ textDecoration: "underline" }}
-                          href="https://drive.google.com/drive/folders/1WN_h2HqENEfCfQt3P-z2f7TaNo5CJrEO"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Archivio Notiziari
-                        </a>
-                      ),
-                    },
-                  ],
-                }}
-                color="#454B66"
-              />
-              <SimpleList
-                list={{
-                  titolo: "Convegni",
-                  elenco: [
-                    {
-                      elemento: (
-                        <a
-                          style={{ textDecoration: "underline" }}
-                          href="https://drive.google.com/drive/folders/1Qv1Eg9E8fwnHUDtKVp8pRpUu7qim4FIJ"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Archivio Convegni
-                        </a>
-                      ),
-                    },
-                  ],
-                }}
-                color="#454B66"
-              />
-            </div>
-          </section>
+              <div className="m-list-wrapper">
+                {archives.map((archive, index) => (
+                  <SimpleList
+                    key={archive.titolo}
+                    list={{
+                      ...archive,
+                      elenco: [
+                        {
+                          elemento: (
+                            <a
+                              style={{ textDecoration: "underline" }}
+                              href={archiveLinks[index]}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Vai all'archivio
+                            </a>
+                          ),
+                        },
+                      ],
+                    }}
+                    color="#454B66"
+                  />
+                ))}
+              </div>
+            </section>
+          )}
 
           <NewsletterCard page={page} />
         </main>
