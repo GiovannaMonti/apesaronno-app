@@ -50,7 +50,7 @@ export default function News({ page }) {
           <title>{page.title.rendered} | A.P.E. Saronno</title>
           <meta
             name="description"
-            content="Associazione proprietà edilizia. Da oltre 40 anni al fianco dei piccoli proprietari di casa."
+            content="Resta sempre al passo con gli ultimi aggiornamenti e consulta il nostro archivio storico con i notiziari e gli eventi passati."
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>

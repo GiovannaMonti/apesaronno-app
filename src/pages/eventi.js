@@ -53,7 +53,7 @@ export default function Eventi({ page }) {
           <title>{page.title.rendered} | A.P.E. Saronno</title>
           <meta
             name="description"
-            content="Associazione proprietà edilizia. Da oltre 40 anni al fianco dei piccoli proprietari di casa."
+            content="Da sempre organizziamo eventi di divulgazione aperti al pubblico sulle principali novità in ambito edilizio."
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>

@@ -54,7 +54,7 @@ export default function Article({ post }) {
           <title>{post.title.rendered} | A.P.E. Saronno</title>
           <meta
             name="description"
-            content="Associazione proprietà edilizia. Da oltre 40 anni al fianco dei piccoli proprietari di casa."
+            content={`Associazione proprietà edilizia. ${post.title.rendered}`}
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>

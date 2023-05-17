@@ -37,7 +37,7 @@ export default function Contatti({ page }) {
           <title>{page.title.rendered} | A.P.E. Saronno</title>
           <meta
             name="description"
-            content="Associazione proprietà edilizia. Da oltre 40 anni al fianco dei piccoli proprietari di casa."
+            content="Compila il nostro modulo di contatto per chiedere informazioni alla segreteria. Saremo lieti di rispondere alle tue richieste!"
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>

@@ -39,7 +39,7 @@ export default function Servizi({ page }) {
           <title>{page.title.rendered} | A.P.E. Saronno</title>
           <meta
             name="description"
-            content="Associazione proprietà edilizia. Da oltre 40 anni al fianco dei piccoli proprietari di casa."
+            content="I nostri professionisti offrono servizi in tutti gli ambiti dell'edilizia, dalla consulenza legale alla stesura dei contratti di locazione."
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>

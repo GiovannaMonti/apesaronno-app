@@ -41,7 +41,7 @@ export default function ChiSiamo({ page }) {
           <title>{page.title.rendered} | A.P.E. Saronno</title>
           <meta
             name="description"
-            content="Associazione proprietà edilizia. Da oltre 40 anni al fianco dei piccoli proprietari di casa."
+            content="L'Associazione Proprietà Edilizia nasce nel 1973 come associazione dei Piccoli Proprietari Saronnesi, dedita alla tutela dei proprietari di immobili."
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
