@@ -1,1 +1,1 @@
-export const IS_COURTESY_PAGE = true
+export const IS_COURTESY_PAGE = false
