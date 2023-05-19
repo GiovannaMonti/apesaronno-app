@@ -94,7 +94,7 @@ export default function News({ page }) {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              Vai all'archivio
+                              {`Vai all'archivio`}
                             </a>
                           ),
                         },
