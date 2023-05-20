@@ -58,12 +58,13 @@ export default function ChiSiamo({ page }) {
               src={page.fimg_url}
               alt="saronno"
             />
-
-            {paragraphs.map((p, index) => (
-              <p key={index} className="p-big-serif" data-aos="fade">
-                {p.attrs.testo}
-              </p>
-            ))}
+            <div>
+              {paragraphs.map((p, index) => (
+                <p key={index} className="p-big-serif" data-aos="fade">
+                  {p.attrs.testo}
+                </p>
+              ))}
+            </div>
           </section>
 
           <section className="o-people">

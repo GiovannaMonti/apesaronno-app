@@ -5,8 +5,11 @@
 
   .m-description {
     padding: 2rem 16px;
+    display: flex;
+    flex-direction: column;
 
     .a-featured-image {
+      height: 100%;
       margin-bottom: 2rem;
     }
 
@@ -42,9 +45,10 @@
 
     .m-description {
       padding: 2rem 60px;
+      flex-direction: row;
 
       .a-featured-image {
-        max-width: 50%;
+        max-width: 40%;
         padding-right: 2rem;
         margin-bottom: 0;
       }
